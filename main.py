@@ -163,11 +163,11 @@ def main():
                         help='starting angle of pendulum 2 (degrees)')
 
     parser.add_argument('-o1', '--output_file_1',
-                        default=generate_file_name(),
+                        default='sys1-'+generate_file_name(),
                         help='name of file to be saved for the first pendulum system')
     
     parser.add_argument('-o2', '--output_file_2',
-                        default=generate_file_name(),
+                        default='sys2-'+generate_file_name(),
                         help='name of file to be saved for the second pendulum system')
 
     args = parser.parse_args()
@@ -175,12 +175,14 @@ def main():
     
     pendulum1 = Pendulum(theta1=args.pen1a_angle, theta2=args.pen2a_angle, dt=0.01)
     animator1 = Animator(pendulum=pendulum1, draw_trace=True)
-    animator1.animate()
-    animator1.save(args.output_file_1)
 
     pendulum2 = Pendulum(theta1=args.pen1b_angle, theta2=args.pen2b_angle, dt=0.01)
     animator2 = Animator(pendulum=pendulum2, draw_trace=True)
+
+    animator1.animate()
     animator2.animate()
+
+    animator1.save(args.output_file_1)
     animator2.save(args.output_file_2)
 
     plt.show()
