@@ -162,11 +162,11 @@ def main():
                         default=DEFAULT_ANGLE-0.03,
                         help='starting angle of pendulum 2 (degrees)')
 
-    parser.add_argument('-o', '--output_file_1',
+    parser.add_argument('-o1', '--output_file_1',
                         default=generate_file_name(),
                         help='name of file to be saved for the first pendulum system')
     
-    parser.add_argument('-o', '--output_file_2',
+    parser.add_argument('-o2', '--output_file_2',
                         default=generate_file_name(),
                         help='name of file to be saved for the second pendulum system')
 
