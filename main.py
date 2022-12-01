@@ -154,12 +154,12 @@ def main():
                         default=DEFAULT_ANGLE-0.01,
                         help='starting angle of pendulum 2 (degrees)')
     
-    parser.add_argument('-p1_b', '--p1b_angle', type=float,
+    parser.add_argument('-p1_b', '--pen1b_angle', type=float,
                         default=DEFAULT_ANGLE,
                         help='starting angle of pendulum 1 (degrees)')
 
-    parser.add_argument('-p2_b', '--p2b_angle', type=float,
-                        default=DEFAULT_ANGLE-0.01,
+    parser.add_argument('-p2_b', '--pen2b_angle', type=float,
+                        default=DEFAULT_ANGLE-0.03,
                         help='starting angle of pendulum 2 (degrees)')
 
     parser.add_argument('-o', '--output_file_1',
